@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-reactive-security
+server:
+  port: 8089
+  error:
+    include-message: never
+    include-binding-errors: never
+
+jwt:
+  secret: ${JWT_SECRET:v9B27A4XpM6zQ8W1rTvY5uI3oK0jH4gF2dS1aA5gH6jK7lI8_PROD_KEY_STRENGTH_256_BITS}
+  access-token-expiration: ${JWT_ACCESS_EXPIRATION:3600000} # ১ ঘণ্টা
+  refresh-token-expiration: ${JWT_REFRESH_EXPIRATION:604800000} # ৭ দিন
+
+#spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/reactive_security_db}
